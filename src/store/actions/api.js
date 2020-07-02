@@ -3,7 +3,7 @@ import {
   SET_DATA
 } from './actionTypes'
 
-export const getAsyncData = payload => {
+export const getAsyncData = () => {
   return {
     type: GET_ASYNC_DATA
   }

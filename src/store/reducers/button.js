@@ -1,6 +1,7 @@
 import {
   INCREMENT,
-  DESCREMENT
+  DESCREMENT,
+  SET_BUTTON_COUNTER
 } from './../actions/actionTypes'
 
 const initialState = {
@@ -13,6 +14,8 @@ const buttonReducer = (state = initialState, action) => {
       return { counter: state.counter + 1 }
     case DESCREMENT:
       return { counter: state.counter - 1 }
+    case SET_BUTTON_COUNTER:
+        return { counter: action.number }
     default:
       return state
   }
