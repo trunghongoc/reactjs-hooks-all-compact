@@ -10,11 +10,11 @@ import * as actionTypes from './../../store/actions/actionTypes'
 
 import Home from './../../pages/Home'
 
-const aPIResponseData = { greeting: 'hello there' }
+const apiResponseData = { greeting: 'hello there' }
 
 const server = setupServer(
   rest.get('https://httpbin.org/json', (req, res, ctx) => {
-    return res(ctx.json(aPIResponseData))
+    return res(ctx.json(apiResponseData))
   })
 )
 
@@ -132,7 +132,7 @@ describe('Home', () => {
       await waitForElement(() => getByTestId('saga-get-data-disp'))
       await waitForElement(() => getByTestId('saga-get-data-disp'))
 
-      expect(JSON.parse(value.textContent).payload).toEqual(aPIResponseData)
+      expect(JSON.parse(value.textContent).payload).toEqual(apiResponseData)
     })
   })
 })

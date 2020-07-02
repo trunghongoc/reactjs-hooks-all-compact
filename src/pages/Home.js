@@ -6,6 +6,8 @@ import {
 import * as buttonAction from './../store/actions/button'
 import * as sagaAction from './../store/actions/api'
 
+import MyCounter from './../components/exampleStorybookComponent/MyCounter'
+
 const Home = ({ ahi = 'gì vậy mấy má ui' }) => {
   const dispatch = useDispatch()
 
@@ -27,6 +29,7 @@ const Home = ({ ahi = 'gì vậy mấy má ui' }) => {
   return (
     <>
       <p>Home</p>
+      <MyCounter/>
 
       <p data-testid="props-ahi">{ ahi }</p>
 
